@@ -1,6 +1,6 @@
 ---
 name: chatgpt-codex-collaboration
-description: "Run an explicitly requested ChatGPT-plans/Codex-executes workflow: prepare evidence-based handoffs, have ChatGPT specify implementation, independently challenge the plan, execute and verify, then review results with ChatGPT. Use when the user asks Codex and ChatGPT to collaborate on planning and execution, not for ordinary coding or a generic request to use AI."
+description: "Coordinate ChatGPT planning with Codex implementation and verification. Trigger when users request this collaboration naturally, such as ‘先和 GPT 商量再做’, ‘让 ChatGPT 出方案你来实现’, ‘和 GPT 一起做’, or ‘ask ChatGPT to plan and implement it’. The skill name is not required. Do not trigger on a generic mention of ChatGPT, GPT, or AI without a request for collaboration."
 ---
 
 # ChatGPT and Codex collaboration
