@@ -1,6 +1,6 @@
 <div align="center">
 
-# ChatGPT × Codex
+# CoGPT
 
 ### 把复杂问题想透，把真正重要的事做成。
 
@@ -35,9 +35,11 @@
 
 打开 Codex，在你要工作的项目中告诉它：
 
-> 请从 `https://github.com/Shaozrrr/chatgpt-codex-collaboration` 的 `skill` 目录安装 `chatgpt-codex-collaboration`，安装前检查已有版本，不要覆盖我的其他文件。安装完成后告诉我如何开始使用。
+> 请从 `https://github.com/Shaozrrr/CoGPT` 的 `skill` 目录安装 `cogpt`，安装前检查已有版本，不要覆盖我的其他文件。安装完成后告诉我如何开始使用。
 
 你也可以参考文末的[手动安装与管理](#手动安装与管理)。安装后请开启新的 Codex 会话，让它发现新增的 Skill。
+
+如果此前安装过 `chatgpt-codex-collaboration`，更新时先检查并备份旧目录，再将旧版本迁移为 `cogpt`，避免两个版本同时被发现。
 
 ### 3 · 把目标交给它
 
@@ -51,11 +53,11 @@
 
 也可以明确指定 Skill，尤其是在想确保使用这套协作方式时：
 
-> 使用 `$chatgpt-codex-collaboration` 进行深度协作，帮我完善这个项目。先和 ChatGPT 讨论方案，检查项目现状，再实现并用实际结果验收。
+> 使用 `$cogpt` 进行深度协作，帮我完善这个项目。先和 ChatGPT 讨论方案，检查项目现状，再实现并用实际结果验收。
 
 对于范围较小的问题，也可以说：
 
-> 使用 `$chatgpt-codex-collaboration` 进行轻量协作，帮我排查这个问题；说明原因、实际检查结果和剩余限制。
+> 使用 `$cogpt` 进行轻量协作，帮我排查这个问题；说明原因、实际检查结果和剩余限制。
 
 轻量与深度决定讨论和验证的范围。你要求 ChatGPT 参与时，两种方式都会以真实交流为目标；如果当前环境无法连接，Codex 应说明限制，提供精简的交接内容，并继续能够独立完成的工作，不会声称讨论已经发生。
 
@@ -92,7 +94,7 @@
 
 这些问题，很难靠一次回答解决。
 
-**ChatGPT × Codex Collaboration** 把规划、执行与验收连接成一套持续运转的工作流。它让 ChatGPT 提出完整方案，让 Codex 回到真实项目中核查、实现和测试，再把结果带回讨论，决定下一步。
+**CoGPT** 把规划、执行与验收连接成一套持续运转的工作流。它让 ChatGPT 提出完整方案，让 Codex 回到真实项目中核查、实现和测试，再把结果带回讨论，决定下一步。
 
 它希望解决的，是 AI 协作中最容易被忽视的那段距离：**从“有一个想法”，到“知道它为什么可行”，再到“证明它真的有效”。**
 
@@ -220,12 +222,12 @@ Codex 会先梳理用户目标、现有实现、运行环境、历史尝试和�
 以下命令适用于 macOS 或 Linux 的终端，并将 Skill 安装到**当前项目**的 `.agents/skills` 目录。需要 Git；请在想使用该 Skill 的项目目录运行。
 
 ```bash
-git clone https://github.com/Shaozrrr/chatgpt-codex-collaboration.git && \
+git clone https://github.com/Shaozrrr/CoGPT.git cogpt && \
 mkdir -p .agents/skills && \
-mkdir .agents/skills/chatgpt-codex-collaboration && \
-cp -R chatgpt-codex-collaboration/skill/. .agents/skills/chatgpt-codex-collaboration/
+mkdir .agents/skills/cogpt && \
+cp -R cogpt/skill/. .agents/skills/cogpt/
 ```
 
-`mkdir` 在目标已经存在时会报错，避免直接覆盖旧版本；如果它报错，请先检查并备份旧版本，再自行决定如何更新。若复制中断，也请检查目标目录是否完整。安装完成后开启新的 Codex 会话，使用 `$chatgpt-codex-collaboration` 调用；也可在 Codex 的 Skill 列表中查找该名称。
+`mkdir` 在目标已经存在时会报错，避免直接覆盖旧版本；如果它报错，请先检查并备份旧版本，再自行决定如何更新。若复制中断，也请检查目标目录是否完整。安装完成后开启新的 Codex 会话，使用 `$cogpt` 调用；也可在 Codex 的 Skill 列表中查找该名称。
 
-**更新**时，先检查并备份目标目录，再由 Codex 根据上述仓库地址更新；**卸载**时，确认目标目录无其他需要保留的文件后，将对应的 `chatgpt-codex-collaboration` 目录移走或删除。不同系统与 Codex 版本的操作方式可能不同；不熟悉终端时，直接请 Codex 协助即可。
+**更新**时，先检查并备份目标目录，再由 Codex 根据上述仓库地址更新；**卸载**时，确认目标目录无其他需要保留的文件后，将对应的 `cogpt` 目录移走或删除。不同系统与 Codex 版本的操作方式可能不同；不熟悉终端时，直接请 Codex 协助即可。
