@@ -13,6 +13,63 @@
 
 ---
 
+<p align="center">
+  <a href="#快速开始">快速开始</a> · <a href="#适合什么时候用">使用场景</a> · <a href="#协作是怎样发生的">协作方式</a> · <a href="#使用前需要知道">使用须知</a>
+</p>
+
+## 从一个想法，到一份可以检验的成果
+
+你提出目标，Codex 先了解项目的现状；ChatGPT 协助拆解问题、比较方案；Codex 回到真实环境中审查、实现和验证。遇到瓶颈，它们会带着已有证据重新判断下一步。最终，你得到的不只是一个答案，还有一份清楚的结果：**做成了什么，如何验证，哪些问题仍待解决。**
+
+它是一份安装在 Codex 中的协作 Skill，适合希望借助 AI 完成真实项目的人。它不是独立应用，也不会自行提供 ChatGPT 账号或连接。
+
+## 快速开始
+
+### 1 · 先准备好 Codex 和 ChatGPT
+
+你需要能使用 Codex。要让 ChatGPT 实际参与，还需要有可用的 ChatGPT 访问方式；能否自动交流取决于当前环境的工具与权限。服务的使用额度和费用以各自账户及套餐为准。
+
+### 2 · 安装 Skill
+
+打开 Codex，在你要工作的项目中告诉它：
+
+> 请从 `https://github.com/Shaozrrr/chatgpt-codex-collaboration` 的 `skill` 目录安装 `chatgpt-codex-collaboration`，安装前检查已有版本，不要覆盖我的其他文件。安装完成后告诉我如何开始使用。
+
+你也可以参考文末的[手动安装与管理](#手动安装与管理)。安装后请开启新的 Codex 会话，让它发现新增的 Skill。
+
+### 3 · 把目标交给它
+
+在新的会话中，可以这样开始：
+
+> 使用 `$chatgpt-codex-collaboration` 进行深度协作，帮我完善这个项目。先和 ChatGPT 讨论方案，检查项目现状，再实现并用实际结果验收。
+
+对于范围较小的问题，也可以说：
+
+> 使用 `$chatgpt-codex-collaboration` 进行轻量协作，帮我排查这个问题；说明原因、实际检查结果和剩余限制。
+
+轻量与深度决定讨论和验证的范围。你要求 ChatGPT 参与时，两种方式都会以真实交流为目标；如果当前环境无法连接，Codex 应说明限制，提供精简的交接内容，并继续能够独立完成的工作，不会声称讨论已经发生。
+
+## 适合什么时候用
+
+- **开始一个产品**：从需求、约束和取舍出发，形成可执行的方案，再逐步实现。
+- **解决反复出现的问题**：整理现象、已经做过的尝试和证据，避免在同一条路上盲目重复。
+- **比较方案或改进体验**：明确需要比较的条件，必要时参考已有产品、开源项目和可复用工具。
+- **继续长期项目**：保留关键决定、已验证结果和下一步，让中断后的工作有据可循。
+
+## 协作是怎样发生的
+
+小任务可以使用轻量协作；涉及架构、重要取舍或持续遇到瓶颈时，可以使用深度协作。重要阶段会根据实际需要记录目标、方案与测试证据。对于两次条件可比较、且有记录的改进尝试仍无明显改善的情况，工作流会停止继续调整，先整理证据并请求 ChatGPT 复核。它不会把缺少基线的观察、网络故障或工具错误直接算成两次效果失败。
+
+交付时，结果应让你看清：**完成了什么、实际检查了什么、结果如何、还有哪些没有验证。** 这是工作流的目标；具体效果仍取决于任务、工具连接和可获得的证据。
+
+## 使用前需要知道
+
+- **隐私**：讨论方案时可能需要向 ChatGPT 传递必要背景。对于非公开源码、文件、截图和日志，遵循你的授权与工具权限；不要提供密码、密钥或验证码。
+- **连接**：自动协作依赖当前环境支持的 ChatGPT 访问方式；如无法连接，可以使用经过处理的简短交接内容继续讨论。Skill 本身不会绕过登录或权限。
+- **效果**：测试、benchmark 和对标按任务需要选择。Skill 提供工作方法，不保证每次结果正确，也不保证节省固定比例的时间或 token。
+
+---
+
 ## 好的执行，始于正确的问题
 
 开发一个产品时，我们常常希望 AI 快一点：快一点理解需求，快一点写出代码，快一点把功能做出来。
@@ -146,15 +203,17 @@ Codex 会先梳理用户目标、现有实现、运行环境、历史尝试和�
 
 </div>
 
-## 安装与使用
+## 手动安装与管理
 
-将仓库克隆到本地，然后把 `skill` 目录复制到 Codex 的 skills 目录：
+以下命令适用于 macOS 或 Linux 的终端，并将 Skill 安装到**当前项目**的 `.agents/skills` 目录。需要 Git；请在想使用该 Skill 的项目目录运行。
 
 ```bash
-git clone https://github.com/Shaozrrr/chatgpt-codex-collaboration.git
-mkdir -p ~/.codex/skills
-test ! -e ~/.codex/skills/chatgpt-codex-collaboration && \
-  cp -R chatgpt-codex-collaboration/skill ~/.codex/skills/chatgpt-codex-collaboration
+git clone https://github.com/Shaozrrr/chatgpt-codex-collaboration.git && \
+mkdir -p .agents/skills && \
+mkdir .agents/skills/chatgpt-codex-collaboration && \
+cp -R chatgpt-codex-collaboration/skill/. .agents/skills/chatgpt-codex-collaboration/
 ```
 
-如果目标目录已经存在，请先备份或移走旧版本，再执行复制。重新打开 Codex 后，在任务中说明希望使用 `chatgpt-codex-collaboration` skill 即可。
+`mkdir` 在目标已经存在时会报错，避免直接覆盖旧版本；如果它报错，请先检查并备份旧版本，再自行决定如何更新。若复制中断，也请检查目标目录是否完整。安装完成后开启新的 Codex 会话，使用 `$chatgpt-codex-collaboration` 调用；也可在 Codex 的 Skill 列表中查找该名称。
+
+**更新**时，先检查并备份目标目录，再由 Codex 根据上述仓库地址更新；**卸载**时，确认目标目录无其他需要保留的文件后，将对应的 `chatgpt-codex-collaboration` 目录移走或删除。不同系统与 Codex 版本的操作方式可能不同；不熟悉终端时，直接请 Codex 协助即可。

@@ -9,6 +9,8 @@ ChatGPT is the planning partner: ask it for a concrete, end-to-end solution, inc
 
 Scale the collaboration to the decision: for a small, reversible task use a brief real ChatGPT planning exchange and focused verification; for architecture, consequential tradeoffs or recurring blockers request a fuller plan and evidence. Scaling changes depth, not the user's explicitly requested participation. Do not create a state file or benchmark for a simple task merely to satisfy this skill. If ChatGPT is unavailable, state that; never present your own plan as its participation.
 
+When the user asks for light or deep collaboration, honor that preference without skipping the required actual ChatGPT exchange. If an authorized connection is unavailable, explain the specific missing capability and offer a concise, sanitized handoff the user can take to ChatGPT and return, while continuing independent work where possible. Clearly label the missing exchange and avoid exposing private project material without the required authorization. Summarize outcomes in plain language: what changed, what was actually checked, the results, remaining gaps, and the next action when relevant; do not imply checks were performed when they were not.
+
 ## 1. Ground the handoff
 
 Inspect the actual workspace, relevant instructions, existing code, tests, configuration and current service state before asking for a plan. Do not repeat work already supported by reliable evidence. Separate user requirements, decisions, assumptions, constraints, known defects, measured results and unknowns. Identify the stage of delivery and avoid treating experimental, mocked, local, installed and deployed versions as interchangeable.
