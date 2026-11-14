@@ -42,7 +42,7 @@ Use only fields relevant to the task. Do not send this template verbatim with em
 > **Results:** [test cases and actual outcomes, failures, sample sizes, latency/error metrics and their definitions; real vs simulated/replay; installed vs development build; before/after comparability].
 > **Benchmark comparison:** [baseline versus candidate and relevant comparator on the same cases; quality, coverage, performance, usability, reliability and cost where material; raw counts, scope, conditions, incomparability and uncertainty].
 > **Gaps and caveats:** [untested scenarios, missing independent ground truth, system conditions, cost and permissions].
-> For each requirement classify: proven / contradicted / incomplete / insufficient evidence. Identify material gaps or regressions, decide pass/fail/not yet determinable, and recommend the smallest useful next step with a stop condition. Do not lower standards silently or ask to rerun passing tests without a reason.
+> Return an acceptance report with a concise overall conclusion, then a table with columns **acceptance item | actual evidence and scope | verdict**. Classify each item as pass / fail / incomplete / insufficient evidence. List unverified boundaries, material gaps or regressions, and the smallest useful next step with a stop condition. Distinguish supplied evidence from anything you did not personally observe; do not invent tests or figures, lower standards silently, or request repeat tests without a reason.
 
 ## Compact continuation handoff
 
