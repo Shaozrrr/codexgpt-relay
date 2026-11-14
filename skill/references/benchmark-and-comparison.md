@@ -45,3 +45,18 @@ When the project merits a durable note, keep one discoverable record with:
 - Tests still due, constraints and blockers; links to result artifacts, excluding credentials and private content.
 
 Update at meaningful milestones; avoid duplicate copies, verbose logs and repetition of checks that have already passed without a new reason.
+
+## Minimal experiment record
+
+For a repeated or decision-relevant measured trial, append a concise entry to the existing benchmark record. Set meaningful improvement, experiment and cost limits before testing; respect user limits. Record actual paid usage when relevant. Keep the same fixtures and metric definitions where possible; explicitly mark missing baselines and non-comparable results. Do not use this template as a requirement for ordinary small changes.
+
+```text
+Question / hypothesis and decision this test can change:
+Case, reference, version, environment and metric definitions:
+Baseline and target / source of target:
+Change and controlled variables:
+Result, failures, sample size, cost and evidence link:
+Decision: continue / diagnose / pivot; reason, next bounded step and stop condition:
+```
+
+For evaluating this skill's efficiency, compare representative similar tasks with and without it using the same scope and acceptance standard. Record total input/output tokens across both tools when available, elapsed time, cost, outcome and rework; note missing usage and confounders. One task or prompt length alone does not establish a general saving. Never claim a percentage without measured comparable data.

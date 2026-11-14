@@ -47,3 +47,15 @@ Use only fields relevant to the task. Do not send this template verbatim with em
 ## Compact continuation handoff
 
 Preserve: user's objective and non-negotiable constraints; accepted design and model decisions; authoritative current branch/build/deployment and artifact paths; completed changes with tests and measured evidence; in-flight process handles and checkpoints; exact unresolved issues and known blockers; next safe step. Distinguish what ChatGPT suggested from what Codex actually verified. Omit secrets and unrelated history.
+
+## Minimal project state snapshot
+
+For substantial cross-session work, add this to the existing project record at a milestone, decision change or handoff; link existing evidence and decisions rather than copying a second history. On resume, verify the live source/build/environment and running processes; this snapshot can be stale. Omit fields that do not apply and never include secrets.
+
+```text
+Goal and acceptance / constraints:
+Authoritative version, environment and updated-at:
+Verified outcomes and evidence links:
+Outstanding checks, blocker and next safe action:
+Decision, benchmark and artifact references:
+```
