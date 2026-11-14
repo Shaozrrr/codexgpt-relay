@@ -2,6 +2,8 @@
 
 Use for substantial implementation or investigation; for a trivial task, apply the same judgments without creating a formal artifact. User-provided constraints and stop instructions take precedence. An iteration is an evidence-informed change to a candidate approach followed by the relevant comparable validation; compiling, a broken harness, waiting, changing random parameters or a failed network connection is not an efficacy result. Diagnose such infrastructure failures separately and do not misreport them as product results.
 
+Count iterations from documented changes and subsequent comparable evaluations, not merely the number of failing observations or configurations. A baseline is not itself an improvement iteration; if the record does not establish the baseline or sequence of changes, mark the count unknown rather than asserting the two-iteration gate has fired. A genuine hard constraint or an explicit user stop can still justify stopping immediately. Attribute restrictions accurately: distinguish user instructions from temporary evaluation, sandbox or environment constraints.
+
 ## Decisions and executable plan
 
 - ChatGPT proposes the architecture, material dependencies, approach selection, measurable gates and fallback. Codex checks facts, feasibility, consistency, security, rights, cost and alignment with the user's objective before accepting; it owns execution and acceptance.
