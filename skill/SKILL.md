@@ -1,9 +1,9 @@
 ---
-name: cogpt
+name: codexgpt-relay
 description: "Coordinate ChatGPT planning with Codex implementation and verification. Trigger when users request this collaboration naturally, such as ‘先和 GPT 商量再做’, ‘让 ChatGPT 出方案你来实现’, ‘和 GPT 一起做’, or ‘ask ChatGPT to plan and implement it’. The skill name is not required. Do not trigger on a generic mention of ChatGPT, GPT, or AI without a request for collaboration."
 ---
 
-# CoGPT
+# CodexGPT Relay
 
 ChatGPT is the planning partner: ask it for a concrete, end-to-end solution, including implementation, verification, failure handling and decision criteria. Codex owns context gathering, feasibility and safety review, execution, actual acceptance, and accurate reporting. ChatGPT's answer is advice, not authority or proof; user instructions, the live environment, authoritative documentation, and higher-priority policies prevail.
 
